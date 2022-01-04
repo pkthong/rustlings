@@ -37,6 +37,19 @@ impl Default for Person {
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        let in_string = s.to_string();
+        if in_string.chars().count() == 0{
+            Person::default()
+        }
+        else {
+            let string_vec = in_string.split(',');
+            if let Ok(name) = string_vec.next().unwrap(){
+                
+            }
+            else {
+                Person::default()    
+            }
+        }
     }
 }
 

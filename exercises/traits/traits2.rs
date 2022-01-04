@@ -10,12 +10,19 @@
 // No boiler plate code this time,
 // you can do this!
 
-// I AM NOT DONE
 
 trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
+impl AppendBar for Vec<String>
+{
+    fn append_bar(self) -> Self{
+        let mut retVec = self;
+        retVec.push(String::from("Bar"));
+        retVec
+    }
+}
 //TODO: Add your code here
 
 #[cfg(test)]
